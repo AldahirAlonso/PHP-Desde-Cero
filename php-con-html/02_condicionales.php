@@ -1,5 +1,7 @@
 <?php
 $course = "Curso profesional de PHP y Laravel";
+$archived = false; // true or false
+$status = $archived ? "archivado" : "activo" // Operador ternario para determinar el estado del curso
 ?>
 
 <!DOCTYPE html>
@@ -13,5 +15,9 @@ $course = "Curso profesional de PHP y Laravel";
     <h1>Bienvenido al <?= $course; ?></h1>
 
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores distinctio facilis dolorum eos possimus harum libero neque temporibus sed at fuga, minima ipsa suscipit adipisci illum voluptas eum? Quasi, unde?</p>
+
+    <p>
+        Este curso está <?= $status ?>
+    </p>
 </body>
 </html>
