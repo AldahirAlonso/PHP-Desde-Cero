@@ -28,7 +28,7 @@ $tags = [
         <strong>Etiquetas:</strong>
         <ul>
             <?php foreach ($tags as $tag): ?>
-                <li><?= $tag; ?></li>
+                <li><?= $tag ?></li>
             <?php endforeach; ?>
         </ul>
     </p>
