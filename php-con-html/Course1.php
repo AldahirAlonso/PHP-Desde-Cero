@@ -1,12 +1,15 @@
 <?php
 
+require 'CourseType.php'; // Asegúrate de que CourseType.php esté en el mismo directorio
+
 class Course {
 
     public function __construct(
         protected string $title,
         protected string $subtitle,
         protected string $description,
-        protected array $tags
+        protected array $tags,
+        protected CourseType $type = CourseType::FREE // Por defecto, el curso es gratuito 
     ) {
         // Constructor para inicializar las propiedades del curso
         // No es necesario hacer nada aquí, ya que las propiedades se inicializan automáticamente
@@ -22,7 +25,7 @@ class Course {
     }
 
     public function __toString() {
-        $html = "<h1>{$this->title}</h1>";
+        $html = "<h1>{$this->title} - {$this->type->label()}</h1>";
         $html .= "<h2>{$this->subtitle}</h2>";
         $html .= "<p>{$this->description}</p>";
 
