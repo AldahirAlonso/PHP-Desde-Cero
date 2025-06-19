@@ -1,6 +1,6 @@
 <?php
 
-require 'Course.php';
+require 'Course1.php';
 
 $course = new Course(
     title: 'Curso profesional de PHP y Laravel',
@@ -24,22 +24,15 @@ $course->addTag('Backend'); // Agrega una nueva etiqueta.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $course->getTitle() ?></title>
+    <title><?= $course->title ?></title>
 </head>
 <body>
-    <h1>Bienvenido al <?= $course->getTitle() ?></h1>
+    <?= $course ?>
 
-    <h2><?= $course->getSubtitle() ?></h2>
-
-    <p><?= $course->getDescription() ?></p>
-
-    <p>
-        <strong>Etiquetas:</strong>
-        <ul>
-            <?php foreach ($course->getTags() as $tag): ?>
-                <li><?= $tag ?></li>
-            <?php endforeach; ?>
-        </ul>
-    </p>
+    <h3>Tags:</h3>
+    <ul>
+        <?php foreach ($course->tags as $tag): ?>
+            <li><?= $tag ?></li>
+        <?php endforeach; ?>
 </body>
 </html>
