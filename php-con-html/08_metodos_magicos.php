@@ -34,5 +34,6 @@ $course->addTag('Backend'); // Agrega una nueva etiqueta.
         <?php foreach ($course->tags as $tag): ?>
             <li><?= $tag ?></li>
         <?php endforeach; ?>
+    </ul>
 </body>
 </html>
