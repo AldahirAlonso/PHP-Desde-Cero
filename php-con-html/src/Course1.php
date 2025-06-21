@@ -1,6 +1,10 @@
 <?php
 
-require 'CourseType.php'; // Asegúrate de que CourseType.php esté en el mismo directorio
+namespace App;
+
+use InvalidArgumentException;
+
+// require 'CourseType.php'; // Asegúrate de que CourseType.php esté en el mismo directorio
 
 class Course {
 
@@ -46,6 +50,7 @@ class Course {
         if (!is_string($tag)) {
             throw new InvalidArgumentException('La etiqueta debe ser una cadena de texto.');
         }
+        
         if (in_array($tag, $this->tags)) {
             // Si la etiqueta ya existe, no la agregamos
             return;

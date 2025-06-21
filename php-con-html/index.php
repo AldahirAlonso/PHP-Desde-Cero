@@ -1,6 +1,11 @@
 <?php
 
-require 'Course1.php';
+require __DIR__ . '/vendor/autoload.php'; // Asegúrate de que el autoloader de Composer esté incluido
+
+// var_dump(__DIR__); // Para verificar la ruta actual
+
+use App\Course;
+use App\CourseType;
 
 $course = new Course(
     title: 'Curso profesional de PHP y Laravel',

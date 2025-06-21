@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+
+<?php 
+
+echo 'Ask anything to AI' . PHP_EOL; // A simple message to indicate the AI is ready for input
+
+while (true) {
+    $input = readline('You: '); // Read user input from the command line
+
+    if ($input === 'exit' || $input === '') {
+        break; // Exit the loop if the user types 'exit'
+    }
+    
+    echo 'Thinking...' . PHP_EOL; // Indicate that the AI is processing the input
+
+    sleep(2); // Simulate processing time
+
+    echo 'AI: ' . $input . PHP_EOL; // Echo back the input as a response from the AI
+}
